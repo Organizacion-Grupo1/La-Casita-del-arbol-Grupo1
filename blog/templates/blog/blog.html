@@ -1,0 +1,58 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    {% for post in posts %}
+  
+<section class="page-section clearfix">
+<div class="container" style="align-items: center ;">
+    <div class="card" style="width: 18rem;">
+        <img src="{{post.imagen.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{post.titulo}}</h5>
+          <p class="card-text">{{post.contenido}}</p>
+          <p class="card-text"><small class="text-muted">Autor: {{post.autor}}</small></p>
+        </div>
+          <a href="#" class="btn btn-primary">Leer mas...</a>
+        </div>
+    </div>
+</div>
+    
+</section>
+
+  
+
+<!---   
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.imagen.url}}" alt="" style="width: 50%;">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+            <h2 class="section-heading mb-4">
+                <span class="section-heading-lower">{{post.titulo}}</span>
+                <span class="section-heading-upper">{{post.contenido}}</span>
+            </h2>
+            <div style="text-align: left; font-size: 0.8em;">
+                Autor: {{post.autor}}
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
+-->
+
+
+
+
+
+
+    {% endfor %}
+    
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+    <!-- Styles carrusel html-->
+    <link href="{% static 'ProyectoWebApp/css/gestion.css' %}" rel="stylesheet">       
+<!--Pruebo carrusel. Lleva html y css-->
+<div class="slide">
+    <div class="slide-inner">
+        <input class="slide-open" type="radio" id="slide-1" 
+              name="slide" aria-hidden="true" hidden="" checked="checked">
+        <div class="slide-item">
+            <img src="{% static '/ProyectoWebApp/img/carrusel1.png' %}">
+        </div>
+        <input class="slide-open" type="radio" id="slide-2" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+            <img src="{% static '/ProyectoWebApp/img/carrusel2.png' %}">
+        </div>
+        <input class="slide-open" type="radio" id="slide-3" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+            <img src="{% static '/ProyectoWebApp/img/carrusel3.png' %}">
+        </div>
+        <label for="slide-3" class="slide-control prev control-1">‹</label>
+        <label for="slide-2" class="slide-control next control-1">›</label>
+        <label for="slide-1" class="slide-control prev control-2">‹</label>
+        <label for="slide-3" class="slide-control next control-2">›</label>
+        <label for="slide-2" class="slide-control prev control-3">‹</label>
+        <label for="slide-1" class="slide-control next control-3">›</label>
+        <ol class="slide-indicador">
+            <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+            </li>
+        </ol>
+    </div>
+</div><!--Pruebo carrusel. Lleva html y css-->
+<div>
+    <p>
+        
+    </p>
+</div>
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'ProyectoWebApp/img/principal.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper"></span>
+            <span class="section-heading-lower">¿QUIENES SOMOS?</span>
+          </h2>
+          <p class="mb-3">Somos una familia, grande muy grande. 
+            
+            El comedor y merendero "La Casita del Árbol es una familia grande, donde compartimos diariamente alegrías, tristezas, juegos y risas pero sobre todo somos un grupo de personas 
+            comprometidas que dedicamos gran parte de nuestros días a mejorar o intentar mejorar la calidad de vida de muchos niños
+            
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      
+        <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <!--<span class="section-heading-upper"> ¿Es una tarea facil?</span>-->
+                <span class="section-heading-lower">  ¿Es una tarea facil? </span>
+              </h2>
+              <p class="mb-0"> Claro que no, ponemos el pulmón y el corazón en cada cosa. Nada fue, ni es fácil. El comedor se sustenta a base de donaciones de la gente y de grupos solidarios que tenemos la dicha que nos acompañen. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}
+    
