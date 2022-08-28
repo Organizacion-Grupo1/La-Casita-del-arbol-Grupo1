@@ -394,3 +394,23 @@ h2 {
 p {
   color: whitesmoke;
 }
+
+.rv {
+  display: inline-block;
+  font-size: larger;
+  background: rgb(20, 99, 20);
+  color: #fff;
+  padding: 20px 70px;
+  text-decoration: none;
+}
+
+.rv:hover {
+  background: rgb(63, 206, 111);
+}
+
+nav {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
