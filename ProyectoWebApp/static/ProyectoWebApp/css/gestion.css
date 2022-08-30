@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lora';
+  font-family: 'Verdana';
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.png");
   background-attachment: fixed;
   background-position: center;
@@ -12,7 +12,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway';
+  font-family: 'Verdana';
+  
 }
 
 p {
@@ -28,7 +29,7 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: 'Raleway';
+  font-family: 'Verdana';
 }
 
 .site-heading .site-heading-upper {
@@ -44,8 +45,8 @@ p {
 }
 
 .page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 .section-heading {
@@ -62,7 +63,7 @@ p {
 
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
@@ -81,7 +82,7 @@ p {
 
 #mainNav {
   background-color: rgba(24, 64, 8);
-  font-family: 'Raleway';
+  font-family: 'Verdana';
 }
 
 #mainNav .navbar-brand {
@@ -100,7 +101,7 @@ p {
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgba(255, 255, 255, 0.4);
@@ -153,9 +154,9 @@ p {
 }
 
 .cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgb(242, 245, 240);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+;
 }
 
 .cta .cta-inner {
@@ -174,7 +175,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  ;
 }
 
 .cta .cta-innerv {
@@ -383,4 +384,88 @@ ul.errorlist{
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
          -1px 0px 2px rgba(255, 255, 255, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 15px;
+}
+
+.slider-frame {
+width: 1280px;
+  height: auto;
+margin:50px auto 0;
+overflow: hidden;
+}
+
+.slider-frame ul {
+display: flex;
+padding: 0;
+width: 400%;
+
+animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+width: 100%;
+list-style: none;
+}
+
+.slider-frame img {
+width: 100%;
+}
+
+@keyframes slide {
+0% {margin-left: 0;}
+20% {margin-left: 0;}
+
+25% {margin-left: -100%;}
+45% {margin-left: -100%;}
+
+50% {margin-left: -200%;}
+70% {margin-left: -200%;}
+
+75% {margin-left: -300%;}
+100% {margin-left: -300%;}
+}
+
+
+.mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.imagen {
+  width: 75%;
+  margin: 20px auto;
+  background-color: hsl(110, 70%, 37%);
+  color: #fff;
+  padding: 15px;
+}
+
+div.imagen img.izquierda {
+  float: left;
+  margin-right: 15px;
+}
+
+div.imagen img.derecha {
+  float: right;
+  margin-left: 15px;
+}
+
+div.reset {
+  clear: both;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+.circular--square {
+  border-radius: 50%;
 }

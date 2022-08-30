@@ -6,89 +6,148 @@
 
    <!-- Heading -->
    <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
+<div class="container">
+    <div class="intro">
     <!-- Styles carrusel html-->
     <link href="{% static 'ProyectoWebApp/css/gestion.css' %}" rel="stylesheet">       
-<!--Pruebo carrusel. Lleva html y css-->
-<div class="slide">
-    <div class="slide-inner">
-        <input class="slide-open" type="radio" id="slide-1" 
-              name="slide" aria-hidden="true" hidden="" checked="checked">
-        <div class="slide-item">
-            <img src="{% static '/ProyectoWebApp/img/carrusel1.png' %}">
-        </div>
-        <input class="slide-open" type="radio" id="slide-2" 
-              name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-            <img src="{% static '/ProyectoWebApp/img/carrusel2.png' %}">
-        </div>
-        <input class="slide-open" type="radio" id="slide-3" 
-              name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-            <img src="{% static '/ProyectoWebApp/img/carrusel3.png' %}">
-        </div>
-        <label for="slide-3" class="slide-control prev control-1">‹</label>
-        <label for="slide-2" class="slide-control next control-1">›</label>
-        <label for="slide-1" class="slide-control prev control-2">‹</label>
-        <label for="slide-3" class="slide-control next control-2">›</label>
-        <label for="slide-2" class="slide-control prev control-3">‹</label>
-        <label for="slide-1" class="slide-control next control-3">›</label>
-        <ol class="slide-indicador">
-            <li>
-                <label for="slide-1" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-2" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-3" class="slide-circulo">•</label>
-            </li>
-        </ol>
+
+      <div class="container">
+          <div class="row">  
+            <div class="slider-frame">
+                <ul>
+                    <li><img src="{% static '/ProyectoWebApp/img/carrusel1.png' %}"></li>
+                    <li><img src="{% static '/ProyectoWebApp/img/carrusel2.png' %}"></li>
+                    <li><img src="{% static '/ProyectoWebApp/img/carrusel3.png' %}"></li>
+                    <li><img src="{% static '/ProyectoWebApp/img/carrusel4.png' %}"></li>
+                </ul>
+          </div>
+      </div>
+
+
     </div>
-</div><!--Pruebo carrusel. Lleva html y css-->
+<!--Pruebo carrusel. Lleva html y css-->
+<!--Pruebo carrusel. Lleva html y css-->
 <div>
     <p>
         
     </p>
 </div>
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'ProyectoWebApp/img/principal.jpg' %}" alt="">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-upper"></span>
-            <span class="section-heading-lower">¿QUIENES SOMOS?</span>
-          </h2>
-          <p class="mb-3">Somos una familia, grande muy grande. 
-            
-            El comedor y merendero "La Casita del Árbol es una familia grande, donde compartimos diariamente alegrías, tristezas, juegos y risas pero sobre todo somos un grupo de personas 
-            comprometidas que dedicamos gran parte de nuestros días a mejorar o intentar mejorar la calidad de vida de muchos niños
-            
-          </p>
-         
-        </div>
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'ProyectoWebApp/img/principal.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded" style= "background: hsl(110, 70%, 37%);" >
+                <h2>
+                  <span class="section-heading-lower">¿QUIENES SOMOS?</span>
+                </h2>
+                <p class="mb-3">Somos una familia, grande muy grande. 
+                
+                El comedor y merendero "La Casita del Árbol es una familia grande, donde compartimos diariamente alegrías, tristezas, juegos y risas pero sobre todo somos un grupo de personas 
+                comprometidas que dedicamos gran parte de nuestros días a mejorar o intentar mejorar la calidad de vida de muchos niños
+                
+                </p>
+         </div>
       </div>
     </div>
   </section>
 
-
-  
     <!-- Message -->
-    <section class="page-section cta">
-      
-        <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <!--<span class="section-heading-upper"> ¿Es una tarea facil?</span>-->
-                <span class="section-heading-lower">  ¿Es una tarea facil? </span>
-              </h2>
-              <p class="mb-0"> Claro que no, ponemos el pulmón y el corazón en cada cosa. Nada fue, ni es fácil. El comedor se sustenta a base de donaciones de la gente y de grupos solidarios que tenemos la dicha que nos acompañen. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="imagen">
+      <img class="derecha" src="{% static 'ProyectoWebApp/img/mision.png' %}">
+      <aside><h2 class="section-heading mb-4" ><span class="section-heading-lower" > MISIÓN Y VISIÓN </span>
+      </h2>Hace 5 años, tomamos la iniciativa de servir la merienda a los chicos de nuestro barrio ya que veíamos la gran necesidad que nos rodeaba. Comenzamos sirviendo la merienda una vez a la semana a alrededor de 30 chicos del barrio, luego la cantidad de niños fue aumentando, nos vimos obligados a aumentar la cantidad de dias de merienda, lo que hoy nos lleva a contarte que servimos almuerzo y merienda de lunes a sábado a mas de 60 niños, de este barrio y también de barrios aledaños.
+      Donde aumentó el hambre, aumentó la generosidad de de las personas que nos acompañan. </aside>
+    <div class="reset"></div>
+  </div>
 
-    {% endblock %}
+
+<section class="page-section cta">
+  <div class="container" style= "background: hsl(110, 70%, 37%);">
+    <div class="row">
+        <div class="col-md-9" style="color: rgb(249, 247, 247);">
+          <h2 class="section-heading mb-4" >
+          <span class="section-heading-lower" >ACTIVIDADES INCLUSIVAS
+          </span>
+          </h2>
+                <p class="mb-3">Tenemos muy en claro que los niños son el futuro y son quienes estan expuestos a la realidad que hoy nos rodea. La falta de oportunidades, la falta de acompañamiento, en muchos casos, de sus propias familias, pueden afectarlos y llevarlos a involucrarse en la delicuencia, el alcoholismo y las drogas por la situación de vulnerabilidad en la que viven. Por ello creemos que es necesario brindarle la posibildidad de tener estabilidad emocional, afectiva y social como es el compartir con sus pares una mesa o un juego. Confiando fielmente que el deporte es el mejor medio inclusivo, inmediatamente y a la par con el merendero, buscamos la manera de poder dar clases de hockey, y hoy esto es posible gracias a dos profesores que dictan las clases ad honorem. Los chicos de a poco se fueron involucrando y ahora esperan con ansias el dia de la clase o los encuentros deportivos que tenemos la dicha de llevarlos a competir.
+                </p>
+            </div>
+        <div class="col-md-3">
+          <div>
+            <h2 class="section-heading mb-4" >
+              <span class="section-heading-upper"></span>
+              </h2>
+              <img src="{% static 'ProyectoWebApp/img/inclusivos.png' %}" width="100%">
+          </div>  
+        </div>
+  </div>
+</div>
+</div>
+</section>
+<!--Pruebo insertar un mapa con la dirección. -->
+<section class="page-section cta">
+  <div class="container" style= "background: hsl(110, 70%, 37%);">
+    <div class="row">
+        <div class="col-md-6" style="color: rgb(249, 247, 247);">
+          <h2 class="section-heading mb-4" >
+          <span class="section-heading-lower" > UBICACIÓN </span>
+          </h2>
+                <p class="mb-6">Estamos convencidos que todos tenemos algo para compartir con los demás. Por eso, te invitamos a sumarte y ayudarnos a llevar asistencia, esperanza y oportunidades a quienes están en situación de necesidad, para que logren transformar su realidad. Si querés podés acercarte.
+                   Estamos en el Barrio 29 de Agosto, en Resistencia. Chaco, Argentina.  </p>
+            </div>
+        <div class="col-md-6; mapa">
+          <div >
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.3609513328624!2d-59.03231838533229!3d-27.45801998289578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450b75fbfdc0ff%3A0x878ba5f739aa202f!2sFray%20Bertaca%204000%2C%20Resistencia%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1661779368548!5m2!1ses-419!2sar" width="550px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>  
+        </div>
+  </div>
+</div>
+</div>
+</section>
+<!--Pruebo insertar un mapa con la direccion-->
+
+<section class="page-section cta">
+  <div class="container" style= "background: hsl(110, 70%, 37%);">
+    <h2 class="section-heading mb-4" style="color: rgb(249, 247, 247);" ><span class="section-heading-lower" ><p style="text-align:center" style="color: rgb(249, 247, 247);"> NUESTROS HÉROES</p>
+        </span></h2>
+      <div class="row">
+
+      <div class="col-md-3" style="color: rgb(249, 247, 247);">
+        <span class="section-heading-lower"></span>
+        <p style="color: rgb(249, 247, 247);">ERNERSTO AYALA</p></span>  
+        <img class="circular--square" src="{% static 'ProyectoWebApp/img/ayala-perfil.png' %}" width="50%">
+        <p class="mb-6"> </p>
+      </div>
+        <div class="col-md-3" style="color: rgb(249, 247, 247);">
+        <span class="section-heading-lower"><p style="color: rgb(249, 247, 247);"> LUCAS</p>
+         </span>  
+        <img class="circular--square" src="{% static 'ProyectoWebApp/img/ayala-perfil.png' %}" width="50%">
+        <p class="mb-6"></p>
+      </div>
+      <div class="col-md-3" style="color: rgb(249, 247, 247);">
+        <span class="section-heading-lower"><p style="color: rgb(249, 247, 247);"> RAMONA </p>
+        </span>  
+        <img class="circular--square" src="{% static 'ProyectoWebApp/img/ayala-perfil.png' %}" width="50%" style="text-align:center">
+        <p class="mb-6"> </p>
+      </div>
+      <div class="col-md-3" style="color: rgb(249, 247, 247);">
+        <span class="section-heading-lower"></span>
+        <p style="color: rgb(249, 247, 247);"> GUIDO</p></span>  
+        <img class="circular--square" src="{% static 'ProyectoWebApp/img/ayala-perfil.png' %}" width="50%">
+        <p class="mb-6"> </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--Pruebo insertar una card-->
+
+<!--Pruebo insertar un mapa -->
+
+<section>
+  <div class="bd-example">
+    <button type="button" class="btn btn-primary btn-block">DONACIONES</button>
+  </div>
+</section>
+
+{% endblock %}
     
