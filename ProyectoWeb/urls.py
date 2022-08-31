@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+# from django.urls import include,path  (VER SI ESTA CORRECTO EL DE ARRIBA)
+from django.urls import re_path as url
 
+from django.conf.urls.static import static
+from django.conf import settings
+from django.urls import path
+from apps.noticias_app import views
+#from apps.noticias_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +30,9 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     
     path('', include('ProyectoWebApp.urls')),
-    
-]
+
+    url('noticias/', include('apps.noticias_app.urls')),
+    # Esta opcion sirve para noticias?? path('blog/', include('blog.urls')),
+    path('noticias', views.noticias, name='noticias'),    
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT, show_indexes=True)
+     
