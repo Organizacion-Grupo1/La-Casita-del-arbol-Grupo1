@@ -31,8 +31,11 @@ urlpatterns = [
     
     path('', include('ProyectoWebApp.urls')),
 
-    url('noticias/', include('apps.noticias_app.urls')),
-    # Esta opcion sirve para noticias?? path('blog/', include('blog.urls')),
-    path('noticias', views.noticias, name='noticias'),    
+    path('noticias/', include('apps.noticias_app.urls')),
+
+    # url('noticias/', include('apps.noticias_app.urls')),
+    # Esta opcion sirve para?? path('blog/', include('blog.urls')),
+
+       
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT, show_indexes=True)
      

@@ -57,10 +57,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProyectoWeb.urls'
 
+TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'templates')
+TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'apps/noticias_app/templates/noticias')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR),'templates')],
+        'DIRS': [TEMPLATE_DIR,TEMPLATE_NOTICIAS],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'ProyectoWebApp/static'), )
 
 MEDIA_URL='/media/'
-MEDIA_ROOT = (os.path.join(os.path.dirname(BASE_DIR),'media'))
+MEDIA_ROOT = os.path.join((BASE_DIR),'media')
 
 
 # Default primary key field type

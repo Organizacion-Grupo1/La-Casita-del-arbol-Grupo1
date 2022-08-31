@@ -1,6 +1,6 @@
 from time import timezone
 from django.shortcuts import render, redirect
-from .models import Noticia,Categoria,Comentarios
+from apps.noticias_app.models import Noticia,Categoria,Comentarios
 from django.http.response import Http404
 from django.conf import settings
 #from django.http import HttpResponse
@@ -9,13 +9,15 @@ from .forms import NoticiaForm, CommentarioForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import( CreateView)
 
+
 # Create your views here.
 
     
-#def noticias(request):
- #   return render(request, "apps.noticias_app/noticias.html")
+def noticias(request):
+    noticias_app=Noticia, Categoria, Comentarios.objects.all()
+    return render(request, "apps.noticias_app/noticias.html",{"noticias_app":noticias_app})
 
-
+'''
 def index(request):
     #texto = {'mensaje_texto': 'Esta es mi primer pagina :)'}
     ultimasnoticias = Noticia.objects.all().order_by('creado').reverse()[:3]
@@ -26,14 +28,15 @@ def index(request):
 
 def nosotros(request):
     return render(request, 'nosotros.html',{})
-
+'''
+''' 
 def noticias(request):
     lista_noticias = Noticia.objects.all().order_by('creado')
     context = {
         "noticias": lista_noticias,
         "MEDIA_ROOT": 'media/img/noticias/'
     }
-    return render(request, 'noticias.html',context)
+    return render(request, 'apps/noticias_app/templates/apps.noticias_app/noticias.html',context)
 
 def noticiasdetalle(request,id):
     try:
@@ -117,3 +120,4 @@ def comment_remove(request, id):
     noticia_id = comentario.noticia.id
     comentario.delete()
     return redirect('noticia_detalle', id=noticia_id)   
+    '''
