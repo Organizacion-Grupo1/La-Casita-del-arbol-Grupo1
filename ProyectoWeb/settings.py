@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ProyectoWebApp',
     'blog',
+    'apps.noticias_app',
 ]
 
 MIDDLEWARE = [
@@ -53,10 +57,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProyectoWeb.urls'
 
+TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'ProyectoWebApp/templates/ProyectoWebApp')
+TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'apps/noticias_app/templates/apps.noticias_app')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR,TEMPLATE_NOTICIAS],  #direccion del html
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,12 +82,14 @@ WSGI_APPLICATION = 'ProyectoWeb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(os.path.dirname(BASE_DIR),'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
@@ -105,9 +114,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'es-us'
+LANGUAGE_CODE = 'es-es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
@@ -117,10 +126,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+#STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),'static')),
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'ProyectoWebApp/static'), )
 
 MEDIA_URL='/media/'
-MEDIA_ROOT= BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'media')
+#MEDIA_ROOT = os.path.join((BASE_DIR),'media')
 
 
 # Default primary key field type
