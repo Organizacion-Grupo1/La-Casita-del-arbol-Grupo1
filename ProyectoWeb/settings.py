@@ -57,13 +57,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProyectoWeb.urls'
 
-TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'templates')
-TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'apps/noticias_app/templates/noticias')
+TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'ProyectoWebApp/templates/ProyectoWebApp')
+TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'apps/noticias_app/templates/apps.noticias_app')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,TEMPLATE_NOTICIAS],
+        'DIRS': [TEMPLATE_DIR,TEMPLATE_NOTICIAS],  #direccion del html
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,12 +82,14 @@ WSGI_APPLICATION = 'ProyectoWeb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(os.path.dirname(BASE_DIR),'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
@@ -129,7 +131,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'ProyectoWebApp/static'), )
 
 MEDIA_URL='/media/'
-MEDIA_ROOT = os.path.join((BASE_DIR),'media')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'media')
+#MEDIA_ROOT = os.path.join((BASE_DIR),'media')
 
 
 # Default primary key field type

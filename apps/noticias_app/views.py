@@ -12,12 +12,12 @@ from django.views.generic import( CreateView)
 
 # Create your views here.
 
-    
+''' 
 def noticias(request):
     noticias_app=Noticia, Categoria, Comentarios.objects.all()
     return render(request, "apps.noticias_app/noticias.html",{"noticias_app":noticias_app})
+''' 
 
-'''
 def index(request):
     #texto = {'mensaje_texto': 'Esta es mi primer pagina :)'}
     ultimasnoticias = Noticia.objects.all().order_by('creado').reverse()[:3]
@@ -25,11 +25,11 @@ def index(request):
         'noticiasdestacadas':ultimasnoticias
     }
     return render(request, 'index.html',context)
-
+'''
 def nosotros(request):
     return render(request, 'nosotros.html',{})
 '''
-''' 
+
 def noticias(request):
     lista_noticias = Noticia.objects.all().order_by('creado')
     context = {
@@ -37,6 +37,7 @@ def noticias(request):
         "MEDIA_ROOT": 'media/img/noticias/'
     }
     return render(request, 'apps/noticias_app/templates/apps.noticias_app/noticias.html',context)
+
 
 def noticiasdetalle(request,id):
     try:
@@ -62,12 +63,14 @@ def noticiasdetalle(request,id):
     context = {
         "noticia": datanoticia,
         "comentarios":lista_comentarios,
+        # "formulario comentario": form,
         "MEDIA_ROOT": 'media/img/noticias/'
         
     }
 
     return render(request,'detalle-noticia.html',context)
 
+'''
 class CrearNoticiaView(CreateView, LoginRequiredMixin):
     login_url= '/login'
     #redirect_field_name='index_detail.html'
@@ -120,4 +123,4 @@ def comment_remove(request, id):
     noticia_id = comentario.noticia.id
     comentario.delete()
     return redirect('noticia_detalle', id=noticia_id)   
-    '''
+'''

@@ -1,6 +1,6 @@
+from datetime import datetime
 from django.db import models
 from django.utils import timezone
-from datetime import datetime
 
 # Create your models here.
 class Categoria(models.Model):
@@ -38,3 +38,6 @@ class Comentarios(models.Model):
     def aprobarComentario(self):
         self.aprobado = True
         self.save()
+
+    
+
