@@ -33,7 +33,7 @@ urlpatterns = [
     path('noticias/', include('apps.noticias_app.urls')),
     
 
-    # url('noticias/', include('apps.noticias_app.urls')),
+    url('noticias/', include('apps.noticias_app.urls')),
     # Esta opcion sirve para?? path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT, show_indexes=True)
     

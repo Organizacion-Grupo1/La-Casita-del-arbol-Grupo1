@@ -34,7 +34,7 @@ def noticias(request):
     lista_noticias = Noticia.objects.all().order_by('creado')
     context = {
         "noticias": lista_noticias,
-        "MEDIA_ROOT": 'media/img/noticias/'
+        #"MEDIA_ROOT": 'media/img/noticias/'
     }
     return render(request, 'apps/noticias_app/templates/apps.noticias_app/noticias.html',context)
 
@@ -45,7 +45,7 @@ def noticiasdetalle(request,id):
         lista_comentarios = Comentarios.objects.filter(aprobado=True)
     except Noticia.DoesNotExist:
         raise Http404('La Noticia solicitada no existe')
-
+'''
     form=CommentarioForm()
     if request.method=='POST':
         form = CommentarioForm(request.POST)
@@ -69,6 +69,8 @@ def noticiasdetalle(request,id):
     }
 
     return render(request,'detalle-noticia.html',context)
+
+'''
 
 '''
 class CrearNoticiaView(CreateView, LoginRequiredMixin):

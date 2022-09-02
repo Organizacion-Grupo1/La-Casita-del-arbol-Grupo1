@@ -7,7 +7,7 @@ def home(request):
     return render(request, "ProyectoWebApp/home.html")
     
 #def noticias2(request):
- #   return render(request, "ProyectoWebApp/noticias.html")
+#   return render(request, "ProyectoWebApp/noticias.html")
 
 def eventos(request):
     return render(request, "ProyectoWebApp/eventos.html")
