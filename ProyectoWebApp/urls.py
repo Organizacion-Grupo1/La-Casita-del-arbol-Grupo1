@@ -11,6 +11,7 @@ urlpatterns = [
     path('eventos',views.eventos, name="Eventos"),
     path('contacto',views.contacto, name="Contacto"),
     path('login',views.login, name="login"),
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT,show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT,show_indexes=True)
+]#+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT,show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT,show_indexes=True)
 
 #urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #este tenia de Bruno, pero le voy a poner el de la profe para probar si los errores de direcciones tienen que ver con este
+#lo de arriba agregar solo si no muestra alguna imagen
