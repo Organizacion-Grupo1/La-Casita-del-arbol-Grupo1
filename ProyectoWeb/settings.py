@@ -57,13 +57,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProyectoWeb.urls'
 
-TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'ProyectoWebApp/templates/ProyectoWebApp')
-TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'apps/noticias_app/templates/apps.noticias_app')
+#TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'ProyectoWebApp/templates/ProyectoWebApp')
+#TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR),'apps/noticias_app/templates/apps.noticias_app')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,TEMPLATE_NOTICIAS],  #direccion del html
+        'DIRS': [os.path.join(BASE_DIR,"ProyectoWebApp/templates/ProyectoWebApp")],  #direccion del html
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
