@@ -28,6 +28,8 @@ urlpatterns = [
     # path('noticias',views.noticias, name="Noticias"),
     path('noticias/<int:id>/', views.noticiasdetalle, name='noticiasdetalle'),
     # path("noticias/new", views.CrearNoticiaView.as_view(), name='CrearNoticiaView'),
-    # path('comentario/<int:id>/approve', views.comment_approve, name='comment_approve'),
-    # path('comentario/<int:id>/remove', views.comment_remove, name='comment_remove'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True)
+    path('comentario/<int:id>/approve', views.comment_approve, name='comment_approve'), #NUEVO
+    path('comentario/<int:id>/remove', views.comment_remove, name='comment_remove'),    #NUEVO
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
