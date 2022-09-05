@@ -3,24 +3,20 @@
 {% load static %}
 
 {% block content %}
-<section class="container">
+
     {% for noticia in noticias %}
-      <hr class="featurette-divider">
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">{{noticia.titulo}}</h2>
-          <p class="lead">{{noticia.contenido|truncatechars:150}}</p>
-        </div>
-        <div class="col-md-5">
-          <img src="{{MEDIA_ROOT}}{{noticia.img}}" width="300" alt="">
-        </div>
-        <p><a class="btn btn-secondary" href="{% url 'noticiasdetalle' id=noticia.id %}">Leer más &raquo;</a></p>
-      </div>
-  
-      <hr class="featurette-divider">
-    {% endfor %}
-  </section>
+
+<!--Uso parte del que usé en home-nosotros-->
+<div class="imagen">
+  <img class="derecha" src="{{noticia.img.url}}" width="250px">
+  <aside><h2 class="section-heading mb-4"><span class="section-heading-lower"> {{noticia.titulo}} </span>
+  </h2>{{noticia.contenido|truncatechars:500}} </aside>
+      <div class="reset"></div>
+      <p><a class="btn btn-succes" href="{% url 'noticiasdetalle' id=noticia.id %}">Leer más &raquo;</a></p>
+    </div>
+</div>
+
+<!--Uso parte del que usé en home-nosotros-->
+{% endfor %}
 {% endblock %}
-
-
 

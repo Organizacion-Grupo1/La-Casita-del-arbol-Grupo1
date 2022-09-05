@@ -24,16 +24,13 @@ def index(request):
     ultimasnoticias = Noticia.objects.all().order_by('creado').reverse()[:3]
     context ={"noticiasdestacadas":ultimasnoticias}
     return render(request, 'index.html',context)
-'''
-def nosotros(request):
-    return render(request, 'nosotros.html',{})
-'''
+
 
 def noticias(request):
     lista_noticias = Noticia.objects.all().order_by('creado')
     context = {
         "noticias": lista_noticias,
-        "MEDIA_ROOT": 'img/noticias/'}
+        "MEDIA_ROOT": 'media/img/noticias/'}
     return render(request, 'noticias.html',context) # NUEVO
 
 
@@ -61,8 +58,8 @@ def noticiasdetalle(request,id):
     context = {
         "noticia": datanoticia,
         "comentarios":lista_comentarios,
-        # "formulario comentario": form,
-        "MEDIA_ROOT": 'img/noticias/'
+        "formulario comentario": form,
+        "MEDIA_ROOT": 'media/img/noticias/'
         
     }
 
@@ -70,7 +67,7 @@ def noticiasdetalle(request,id):
 
 
 
-'''
+
 class CrearNoticiaView(CreateView, LoginRequiredMixin):
     login_url= '/login'
     #redirect_field_name='index_detail.html'
@@ -91,7 +88,7 @@ class CrearNoticiaView(CreateView, LoginRequiredMixin):
             "posts": posts
         }
         return render(request, "blog_categoria.html", context)
-'''
+
 
 @login_required
 def post_publish(request, id):

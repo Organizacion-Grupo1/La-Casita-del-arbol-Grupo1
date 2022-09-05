@@ -9,8 +9,8 @@ def home(request):
 #def noticias2(request):
 #   return render(request, "ProyectoWebApp/noticias.html")
 
-def eventos(request):
-    return render(request, "ProyectoWebApp/eventos.html")
+#def eventos(request):                                            #NUEVO
+#    return render(request, "ProyectoWebApp/eventos.html")        #NUEVO
 
 def contacto(request):
     return render(request, "ProyectoWebApp/contacto.html")

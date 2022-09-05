@@ -22,6 +22,7 @@ from django.conf import settings
 from django.urls import path
 from apps.noticias_app import views # Agregue la vista de la App
 from ProyectoWebApp import views # Agregue la vista de la App
+from apps.eventos_app import views # Agregue la vista de la App
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,9 +32,13 @@ urlpatterns = [
     path('', include('ProyectoWebApp.urls')),
 
     path('noticias/', include('apps.noticias_app.urls')),
-    
-
+        
     url('noticias/', include('apps.noticias_app.urls')),
+
+    path('eventos/', include('apps.eventos_app.urls')),  # NUEVO
+        
+    url('eventos/', include('apps.eventos_app.urls')),   # NUEVO
+
     # Esta opcion sirve para?? path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT, show_indexes=True)
     

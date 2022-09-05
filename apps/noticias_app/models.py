@@ -38,6 +38,3 @@ class Comentarios(models.Model):
     def aprobarComentario(self):
         self.aprobado = True
         self.save()
-
-    
-
