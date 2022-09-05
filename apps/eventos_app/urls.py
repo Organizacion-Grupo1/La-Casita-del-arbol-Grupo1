@@ -14,7 +14,8 @@ from django.urls import path
 
 urlpatterns = [
     path('eventos',views.eventos, name="Eventos"),
-
 ]
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True)
+
 
 #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
